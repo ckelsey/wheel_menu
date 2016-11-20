@@ -1,25 +1,9 @@
-(function(demo){
+(function(sample){
 	'use strict';
-	demo.config(function ($routeProvider, $locationProvider) {
-		$routeProvider
-		// .when('/', {
-		// 	templateUrl: "./demo/demo.html",
-		// 	controller: 'AppCtlr',
-		// })
-		// .when('/readme', {
-		// 	templateUrl: "./demo/readme.html",
-		// 	controller: 'AppCtlr',
-		// })
-		.when('/', {
-			templateUrl: "./demo/test.html",
-			controller: 'AppCtlr',
-		})
-		.otherwise({ redirectTo: '/' });
-		$locationProvider.html5Mode(true);
-	});
 
-	demo.controller('AppCtlr', function($scope, $q){
-		var self = this;
+	// Need to make sure you define $q
+
+	sample.controller('SampleCtlr', function($scope, $q){
 
 		$scope.menu = {
 
@@ -27,6 +11,8 @@
 
 			// Rigid
 			g_element_1479452730367_wnuic: function() {
+
+				console.log(mflyCommands);
 				return 'Rigid';
 			},
 
@@ -282,70 +268,6 @@
 				return dfr.promise;
 			}
 		};
-
-		this.demoOptions = [{
-			name: 'None',
-			fn: undefined
-		},{
-			name: 'Update model',
-			fn: function(arg){
-				var temp = null;
-				self.documentation['item'].properties['scope']['property'].value = temp;
-			}
-		}];
-
-		this.updateChange = function(dir, propName){
-			if(dir.meta.properties.scope[propName].optionModel == null){
-				dir.meta.properties.scope[propName].optionModel = dir.meta.properties.scope[propName].defaultOption;
-			}
-
-			var optionModel = dir.meta.properties.scope[propName].optionModel;
-			dir.meta.properties.scope[propName].value = dir.meta.properties.scope[propName].options[optionModel].fn;
-		};
-
-		this.documentation = {
-			title: 'wheel_menu',
-			description: "Renders a svg menu",
-
-			// Directive
-
-			"circleMenu": {
-				description: 'Contains the markup and js to render the circle menu svg',
-				markup: '<wheel-menu menu="menu"></wheel-menu>',
-				properties: {
-					scope: {
-						"menu": {
-							type: 'object',
-							description: 'An object with the id\'s of the svg nodes and their cooresponding click function as the value',
-							value: $scope.menu
-						},
-					}
-				}
-			}
-
-
-			// Service
-			/*
-			CKronos: {
-				description: null,
-				properties: {
-					"propertyOrMethod": {
-						description: null,
-						arguments: {
-							arg: {
-								type: null,
-								description: null
-							}
-						},
-						returns: {
-							type: null,
-							description: null
-						}
-					}
-				}
-			}
-			*/
-		}
 	});
 })(angular.module('app', [
 	'ngResource',
