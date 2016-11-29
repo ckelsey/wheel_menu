@@ -19,6 +19,7 @@
 		"angular-route": "latest",
 		"angular-sanitize": "latest",
 		"snap.svg": "latest",
-		"mfly-commands": "latest"
+		"mfly-commands": "latest",
+		"fontawesome": "latest"
 	}
 }
