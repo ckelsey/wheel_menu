@@ -12,6 +12,7 @@
 				function assignFn(node, type){
 
 					var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+					var touchMoving = false;
 
 					function doFn(e){
 						e.stopPropagation();
@@ -21,6 +22,8 @@
 						var fn = fns[events[id][_type]];
 						var scope = angular.element(node).scope();
 						var defer = $q.defer();
+
+						console.log(_type, touchMoving);
 
 						if(fn){
 							fn = fn.text;
@@ -50,6 +53,9 @@
 
 					if(iOS){
 						if(type === 'click'){
+							document.ontouchmove = function(e){ touchMoving = true;}
+							document.ontouchend = function(e){ touchMoving = false; };
+
 							node.removeEventListener('touchend', doFn, false);
 							node.addEventListener('touchend', doFn, false);
 						}
