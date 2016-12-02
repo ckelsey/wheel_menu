@@ -4,7 +4,7 @@
 		return {
 			restrict: 'E',
 			scope: {menu:"="},
-			
+
 			link: function(scope, element, attributes){
 				var events = {"g_element_1479452730399_0l8tt":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730373_qtwrp":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730371_igsbt":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730376_ceg8j":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730371_283tb":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730376_1g6ys":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730382_mvlxq":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730367_wnuic":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730380_61rju":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730380_5t71e":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730379_6dzjm":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730377_9pehs":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730370_es2dn":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730372_k90nk":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730373_1547h":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730376_otufg":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730374_5v727":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730373_926fg":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730369_2n6md":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730368_316gk":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730377_9pg6l":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730378_4u5ib":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730382_9x2z0":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730387_vw9o2":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730392_m0a1g":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730385_o6quj":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730388_uh2bk":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730388_icpcu":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730386_g8j1i":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730388_l81fc":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730387_snbx6":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730387_1yw9p":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730393_artnx":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730386_4p5b9":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730397_qxdxp":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730398_7fuav":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730393_qvd5p":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730395_sa1uk":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730399_da303":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"},"g_element_1479452730398_1jp14":{"mouseover":"function_eurl4","mouseout":"function_91o32","click":"function_flnye"}};
 				var fns = {"function_flnye":{"text":"//CLICK\nvar node = arguments[1];\nvar scope = arguments[2];\nvar _this = Snap.select('#'+node.id);\nvar defer = arguments[3].defer();\nif(scope.menu && scope.menu.hasOwnProperty(node.id)){\n\tvar _fn = scope.menu[node.id]();\n\tif(_fn && _fn.hasOwnProperty('$$state')){\n\t\t_fn.then(function(res){\n\t\t\tdefer.resolve(res);\n\t\t});\n\t}else{\n\t\tdefer.resolve(_fn);\n\t}\n}else{\n\tdefer.reject(false);\n}\nreturn defer.promise;","name":"click"},"function_eurl4":{"text":"//MOUSEOVER\nvar node = arguments[1];\nvar parent = node.parentNode;\nparent.removeChild(node);\nparent.appendChild(node);\nvar scope = arguments[2];\nvar _this = Snap.select('#'+node.id);\nvar matrix = new Snap.Matrix();\nvar dimensions = _this.getBBox();\nmatrix.scale(1.15, 1.15, dimensions.cx, dimensions.cy);\n_this.animate({transform: matrix}, 100);","name":"mouseover"},"function_91o32":{"text":"//MOUSEOUT\nvar node = arguments[1];\nvar scope = arguments[2];\nvar _this = Snap.select('#'+node.id);\nvar matrix = new Snap.Matrix();\nvar dimensions = _this.getBBox();\nmatrix.scale(1, 1, dimensions.cx, dimensions.cy);\n_this.animate({transform: matrix}, 100);","name":"mouseout"}};
@@ -12,7 +12,6 @@
 				function assignFn(node, type){
 
 					var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-					var touchMoving = false;
 
 					function doFn(e){
 						e.stopPropagation();
@@ -22,8 +21,6 @@
 						var fn = fns[events[id][_type]];
 						var scope = angular.element(node).scope();
 						var defer = $q.defer();
-
-						console.log(_type, touchMoving);
 
 						if(fn){
 							fn = fn.text;
@@ -51,15 +48,7 @@
 						return defer.promise;
 					}
 
-					if(iOS){
-						if(type === 'click'){
-							document.ontouchmove = function(e){ touchMoving = true;}
-							document.ontouchend = function(e){ touchMoving = false; };
-
-							node.removeEventListener('touchend', doFn, false);
-							node.addEventListener('touchend', doFn, false);
-						}
-					}else{
+					if(!iOS || (iOS && type === 'click')){
 						node.removeEventListener(type, doFn, false);
 						node.addEventListener(type, doFn, false);
 					}
