@@ -225,12 +225,10 @@
                 };
 
                 var mouseenter = function(e) {
-                    console.log('mouseenter');
                     handle(e, this, 'mouseenter');
                 };
 
                 var mouseleave = function(e) {
-                    console.log('lea');
                     handle(e, this, 'mouseleave');
                 };
 
@@ -269,7 +267,7 @@
                     }
 
                     return defer.promise;
-                }
+                };
 
 
 
