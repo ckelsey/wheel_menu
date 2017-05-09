@@ -214,7 +214,7 @@
                         "name": "click"
                     },
                     "function_eurl4": {
-                        "text": "//mouseenter\nvar node = arguments[1];node.removeEventListener('mouseenter', arguments[4], false);\nnode.parentNode.appendChild(node);\nvar _this = Snap.select('#'+arguments[1].id);\nvar matrix = new Snap.Matrix();\nvar dimensions = _this.getBBox();\nmatrix.scale(1.15, 1.15, dimensions.cx, dimensions.cy);\n_this.animate({transform: matrix}, 100);",
+                        "text": "//mouseenter\nvar node = arguments[1];node.removeEventListener('mouseenter', arguments[4], false);\nnode.parentNode.appendChild(node);\nvar _this = Snap.select('#'+arguments[1].id);\nvar matrix = new Snap.Matrix();\nvar dimensions = _this.getBBox();\nmatrix.scale(1.15, 1.15, dimensions.cx, dimensions.cy);\n_this.animate({transform: matrix}, 100);arguments[1].addEventListener('mouseleave', arguments[5], false);",
                         "name": "mouseenter"
 
                     },
@@ -277,7 +277,7 @@
 
                     if (node) {
                         node.addEventListener('mouseenter', mouseenter, false);
-                        node.addEventListener('mouseleave', mouseleave, false);
+                        // node.addEventListener('mouseleave', mouseleave, false);
                         node.addEventListener('click', click, false);
                     }
                 }
