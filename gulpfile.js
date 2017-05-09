@@ -74,7 +74,6 @@ var vendor_scripts = [
 
     'bower_components/snap.svg/dist/snap.svg-min.js',
     'bower_components/jquery/dist/jquery.min.js',
-    'bower_components/mfly-commands/src/mflyCommands.js'
 ];
 
 
